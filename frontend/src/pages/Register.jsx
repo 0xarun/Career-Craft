@@ -54,7 +54,7 @@ const Register = () => {
     setLoading(true);
 
     try {
-      await register(formData.username, formData.email, formData.password);
+      await register(formData.username, formData.email, formData.password, formData.confirmPassword);
       navigate('/login', { state: { message: 'Registration successful! Please login.' } });
     } catch (err) {
       console.error('Registration error:', err);
